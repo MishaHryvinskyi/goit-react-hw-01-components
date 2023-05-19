@@ -1,38 +1,46 @@
- import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { FcLike, FcFilm, FcReading } from 'react-icons/fc';
+import { 
+  Card, 
+  User, 
+  UserImg, 
+  UserName, 
+  UserTag,
+  UserLocation,
+  Info,
+  InfoItem,
+  Title,
+  Value 
+} from './Profile.styled';
 
 export const Profile = ({ avatar, username, tag, location, stats }) => {
-  return <div 
-  style={{
-    display: "flex",
-    justifyContent: "center",
-  }}
-  >
-  <div>
-    <img
+  return <Card>
+  <User>
+    <UserImg
       src={avatar}
       alt={username}
       width="200"
     />
-    <p>{username}</p>
-    <p>@{tag}</p>
-    <p>{location}</p>
-  </div>
+    <UserName>{username}</UserName>
+    <UserTag>@{tag}</UserTag>
+    <UserLocation>{location}</UserLocation>
+  </User>
 
-  <ul>
-    <li>
-      <span>Followers</span>
-      <span>{stats.followers}</span>
-    </li>
-    <li>
-      <span>Views</span>
-      <span>{stats.views}</span>
-    </li>
-    <li>
-      <span>Likes</span>
-      <span>{stats.likes}</span>
-    </li>
-  </ul>
-</div>;
+  <Info>
+    <InfoItem>
+      <Title>Followers</Title>
+      <Value><FcReading/>{stats.followers}</Value>
+    </InfoItem>
+    <InfoItem>
+      <Title>Views</Title>
+      <Value><FcFilm/>{stats.views}</Value>
+    </InfoItem>
+    <InfoItem>
+      <Title>Likes</Title>
+      <Value><FcLike/>{stats.likes}</Value>
+    </InfoItem>
+  </Info>
+</Card>;
 };
 
 Profile.propTypes = {
@@ -40,43 +48,11 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }).isRequired,
 };
 
-// export const Profile = ({
-//     username,
-//     tag,
-//     location,
-//     avatar,
-//     stats,
-//     followers,
-//     views,
-//     likes,
-// }) => {
-//     return <div class="profile">
-//     <div class="description">
-//       <img
-//         src={avatar}
-//         alt={username}
-//       />
-//       <p class="name">{username}</p>
-//       <p class="tag">{tag}</p>
-//       <p class="location">{location}</p>
-//     </div>
-  
-//     <ul class="stats">
-//       <li>
-//         <span class="label">{stats.followers}</span>
-//         <span class="quantity">1000</span>
-//       </li>
-//       <li>
-//         <span class="label">{stats.views}</span>
-//         <span class="quantity">2000</span>
-//       </li>
-//       <li>
-//         <span class="label">{stats.likes}</span>
-//         <span class="quantity">3000</span>
-//       </li>
-//     </ul>
-//   </div>
-// };
 
