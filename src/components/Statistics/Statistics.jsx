@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import { 
     TitleStatistic, 
     SectionStatistic, 
     UlStatistic,
-    ListItemStatistic
+    ListItemStatistic,
+    Label
  } from './Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
@@ -11,11 +13,21 @@ export const Statistics = ({ title, stats }) => {
   
     <UlStatistic>
         {stats.map(stat => (
-            <ListItemStatistic>
-            <span>{stat.label}</span>
+            <ListItemStatistic key={stat.id}>
+            <Label>{stat.label}</Label>
             <span>{stat.percentage}%</span>
             </ListItemStatistic>
         ))}
     </UlStatistic>
   </SectionStatistic>
+};
+
+Statistics.propTypes = {
+    title: PropTypes.string.isRequired, 
+    stats: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string.isRequired, 
+            percentage: PropTypes.number.isRequired 
+        })
+    ).isRequired 
 };
