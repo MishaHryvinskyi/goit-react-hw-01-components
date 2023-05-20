@@ -10,6 +10,7 @@ export const Card = styled.div`
     flex-direction: column;
     text-align: center;
     box-shadow: 0px 14px 11px -8px rgba(0,0,0,0.61);
+    margin-top: 50px;
 `;
 
 export const User = styled.div`
@@ -20,6 +21,7 @@ export const User = styled.div`
     text-align: center;
     align-items: center;
     margin-bottom: 40px;
+
 `;
 
 export const UserImg = styled.img`

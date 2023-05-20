@@ -29,11 +29,11 @@ export const ListItemStatistic = styled.li`
     display: flex;
     text-alight: center;
     flex-direction: column;
-    
+    width: 60px;
     background-color: pink;
 `; 
 
 export const Label = styled.span`
     margin-bottom: 8px;
-    color: grey;
+    color: white;
 `;

@@ -4,6 +4,8 @@ export const FriendUl = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
 `;
 
 export const FriendItem = styled.li`
