@@ -3,12 +3,13 @@ import styled from "@emotion/styled";
 export const Card = styled.div`
     max-width: 400;
     margin: 0 auto;
-    border: solid 2px red;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 40px;
     background-color: skyblue;
     display: flex;
     flex-direction: column;
     text-align: center;
+    box-shadow: 0px 14px 11px -8px rgba(0,0,0,0.61);
 `;
 
 export const User = styled.div`
@@ -23,9 +24,10 @@ export const User = styled.div`
 
 export const UserImg = styled.img`
     border: solid 5px white;
-    border-radius: 60%;
+    border-radius: 40%;
     background-color: grey;
     margin-bottom: 12px;
+    box-shadow: 0px 14px 11px -8px rgba(0,0,0,0.61);
 `;
 
 export const UserName = styled.p`
@@ -52,6 +54,7 @@ export const Info = styled.ul`
     justify-content: center;
     text-align: center;
     align-items: center;
+    box-shadow: 0px 14px 11px -8px rgba(0,0,0,0.61);
 `;
 
 export const InfoItem = styled.li`

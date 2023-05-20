@@ -31,6 +31,7 @@ export const FriendImg = styled.img`
     padding: 15px;
     border: solid 3px white;
     background-color: grey;
+    box-shadow: 0px 14px 11px -8px rgba(0,0,0,0.61);
 `; 
 
 export const FriendParagraph = styled.p`

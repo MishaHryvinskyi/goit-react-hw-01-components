@@ -20,6 +20,8 @@ export const UlStatistic = styled.ul`
     display: flex;
     text-alight: center;
     border: solid 5px grey;
+    border-radius: 5px;
+    box-shadow: 0px 14px 11px -8px rgba(0,0,0,0.61);
 `;
 
 export const ListItemStatistic = styled.li`
@@ -27,7 +29,7 @@ export const ListItemStatistic = styled.li`
     display: flex;
     text-alight: center;
     flex-direction: column;
-    border: solid 1px grey;
+    
     background-color: pink;
 `; 
 
