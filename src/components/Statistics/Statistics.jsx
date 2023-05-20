@@ -13,7 +13,7 @@ import {
 
 export const Statistics = ({ title, stats }) => {
     return <SectionStatistic>
-    <TitleStatistic>{title}</TitleStatistic>
+     {title && <TitleStatistic>{title}</TitleStatistic>}
   
     <UlStatistic>
         {stats.map(stat => (
@@ -29,7 +29,7 @@ export const Statistics = ({ title, stats }) => {
 };
 
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired, 
+    title: PropTypes.string, 
     stats: PropTypes.arrayOf(
         PropTypes.shape({
             label: PropTypes.string.isRequired, 
