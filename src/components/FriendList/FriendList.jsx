@@ -1,4 +1,11 @@
-import { FriendUl, FriendItem, FriendStatus, FriendImg, FriendParagraph } from "./FriendsList.styled";
+import { 
+  FriendUl, 
+  FriendItem, 
+  FriendStatus, 
+  FriendImg, 
+  FriendParagraph 
+} from "./FriendsList.styled";
+import PropTypes from 'prop-types';
 
 export const FriendList = ({ friends }) => {
     return <FriendUl>
@@ -14,4 +21,15 @@ export const FriendList = ({ friends }) => {
           </FriendItem>
         ))}
   </FriendUl>
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired
+    })
+  ).isRequired
 };

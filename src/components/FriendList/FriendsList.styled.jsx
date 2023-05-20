@@ -7,11 +7,10 @@ export const FriendUl = styled.ul`
 `;
 
 export const FriendItem = styled.li`
-    padding: 30px;
+    padding: 15px;
     display: flex; 
     align-items: center;
     width: 200px;
-    border: solid 2px white;
     justify-content: space-between;
     margin-bottom: 20px;
     background-color: skyblue;
@@ -29,7 +28,7 @@ export const FriendStatus = styled.span`
 
 export const FriendImg = styled.img`
     border-radius: 40%;
-    padding: 20px;
+    padding: 15px;
     border: solid 3px white;
     background-color: grey;
 `; 
